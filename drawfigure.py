@@ -170,6 +170,7 @@ def draw_figure_4():
     nocl_map = [0.5341, 0.5341, 0.5341, 0.5341, 0.5341]
     nocal_ndcg3 = [0.5296, 0.5296, 0.5296, 0.5296, 0.5296]
     x_value = [0.2, 0.4, 0.6, 0.8, 1.0]
+    y_value = [0.525, 0.530, 0.535, 0.540, 0.545, 0.550]
     x_label = ["20%", "40%", "60%", "80%", "100%"]
     ax1.plot(x, map, 'o-', color='#1f77b4', label="CL-MAP")
     ax1.plot(x, ndcg3, '^-' ,color='#ff7f0e', label="CL-NDCG@3")
@@ -178,6 +179,7 @@ def draw_figure_4():
     ax1.set_ylim(0.525, 0.551)
     ax1.set_xticks(x_value)
     ax1.set_xticklabels(x_label, fontproperties=myfont4)
+    ax1.set_yticks(y_value)
     ax1.set_yticklabels(["0.525", "0.530", "0.535", "0.540", "0.545", "0.550"], fontproperties=myfont4)
     ax1.legend(prop=myfont3, loc="center right", bbox_to_anchor=(1.0, 0.55))
     ax1.set_xlabel("Data Amount", fontproperties=myfont4)
@@ -197,7 +199,7 @@ def draw_figure_4():
     ax2.set_xticks(x)
     ax2.set_xticklabels([1, 2, 3, 4, 5], fontproperties=myfont4)
     ax2.set_yticklabels(["0.525", "0.530", "0.535", "0.540", "0.545", "0.550"], fontproperties=myfont4)
-    ax2.legend(prop=myfont3, loc="center right", bbox_to_anchor=(1.0, 0.55))
+    ax2.legend(prop=myfont4, loc="center right", bbox_to_anchor=(1.0, 0.55))
     ax2.set_xlabel("Training Epoch", fontproperties=myfont4)
     ax2.grid(alpha=0.3, linestyle='--')
 
